@@ -51,6 +51,8 @@ namespace Com.Mycompany.MyGame
             // we don't want to do anything.
             if (isConnecting)
             {
+                Debug.Log("ToMaster");
+                Debug.Log("########" + PhotonNetwork.CountOfRooms);
                 // #Critical: The first we try to do is to join a potential existing room. If there is, good, else, we'll be called back with OnJoinRandomFailed()
                 PhotonNetwork.JoinRandomRoom();
             }
@@ -98,6 +100,7 @@ namespace Com.Mycompany.MyGame
             // #Critical
             // this makes sure we can use PhotonNetwork.LoadLevel() on the master client and all clients in the same room sync their level automatically 
             PhotonNetwork.AutomaticallySyncScene = true;
+            
         }
 
         /// <summary>
@@ -106,6 +109,7 @@ namespace Com.Mycompany.MyGame
         void Start()
         {
             // Connect();
+
             progressLabel.SetActive(false);
             controlPanel.SetActive(true);
         }
@@ -127,13 +131,16 @@ namespace Com.Mycompany.MyGame
             progressLabel.SetActive(true);
             controlPanel.SetActive(false);
             // we check if we are connected or not, we join if we are, else we initiate the connection to the server.
+            
             if (PhotonNetwork.IsConnected)
             {
+                Debug.Log("IsConnected");
                 // #Critical we need at this point to attempt joining a Ramdom Room. If it fails, we'll get notified in OnJoinRandomFailed() and we'll create one
                 PhotonNetwork.JoinRandomRoom(); // 네트워크에 연결되면 랜덤방에 입장.
             }
             else
             {
+                Debug.Log("IsNotConnected");
                 // #Critical we must first and foremost(맨앞에 위치한) connect to Photon Online Server.
                 PhotonNetwork.GameVersion = gameVersion;
                 PhotonNetwork.ConnectUsingSettings();

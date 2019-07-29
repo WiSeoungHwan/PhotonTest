@@ -493,12 +493,12 @@ Prefab:
     - target: {fileID: 224114855347184250, guid: d4725c012cc6646548182264bc1a18d7,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 80
       objectReference: {fileID: 0}
     - target: {fileID: 224114855347184250, guid: d4725c012cc6646548182264bc1a18d7,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -15
       objectReference: {fileID: 0}
     - target: {fileID: 224114855347184250, guid: d4725c012cc6646548182264bc1a18d7,
         type: 2}
@@ -513,22 +513,22 @@ Prefab:
     - target: {fileID: 224114855347184250, guid: d4725c012cc6646548182264bc1a18d7,
         type: 2}
       propertyPath: m_AnchorMin.x
-      value: 0.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224114855347184250, guid: d4725c012cc6646548182264bc1a18d7,
         type: 2}
       propertyPath: m_AnchorMin.y
-      value: 0.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 224114855347184250, guid: d4725c012cc6646548182264bc1a18d7,
         type: 2}
       propertyPath: m_AnchorMax.x
-      value: 0.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224114855347184250, guid: d4725c012cc6646548182264bc1a18d7,
         type: 2}
       propertyPath: m_AnchorMax.y
-      value: 0.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 224114855347184250, guid: d4725c012cc6646548182264bc1a18d7,
         type: 2}
@@ -540,11 +540,6 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 114695846671107688, guid: d4725c012cc6646548182264bc1a18d7,
-        type: 2}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1696284037}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d4725c012cc6646548182264bc1a18d7, type: 2}
   m_IsPrefabAsset: 0
@@ -876,12 +871,6 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c844498f51d3d4d6d9056e9bf05e09f4, type: 2}
   m_IsPrefabAsset: 0
---- !u!114 &1696284037 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 114545533835129862, guid: c844498f51d3d4d6d9056e9bf05e09f4,
-    type: 2}
-  m_PrefabInternal: {fileID: 1696284036}
-  m_Script: {fileID: 11500000, guid: 11da4898410c7492fa79a55806d8c86d, type: 3}
 --- !u!1 &2009050426
 GameObject:
   m_ObjectHideFlags: 0

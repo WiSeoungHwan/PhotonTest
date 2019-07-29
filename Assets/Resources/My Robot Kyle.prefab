@@ -414,6 +414,9 @@ GameObject:
   - component: {fileID: 114264998509699106}
   - component: {fileID: 114459856876394264}
   - component: {fileID: 114140860087431232}
+  - component: {fileID: 114168161600059532}
+  - component: {fileID: 114103980863049520}
+  - component: {fileID: 114308480248588930}
   m_Layer: 0
   m_Name: My Robot Kyle
   m_TagString: Untagged
@@ -1701,6 +1704,38 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &114103980863049520
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1425597309360012}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8efc6b1d64977384eb3405357896c656, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_PositionModel:
+    SynchronizeEnabled: 1
+    TeleportEnabled: 1
+    TeleportIfDistanceGreaterThan: 3
+    InterpolateOption: 4
+    InterpolateMoveTowardsSpeed: 1
+    InterpolateLerpSpeed: 10
+    ExtrapolateOption: 0
+    ExtrapolateSpeed: 1
+    ExtrapolateIncludingRoundTripTime: 1
+    ExtrapolateNumberOfStoredPositions: 1
+  m_RotationModel:
+    SynchronizeEnabled: 1
+    InterpolateOption: 1
+    InterpolateRotateTowardsSpeed: 180
+    InterpolateLerpSpeed: 5
+  m_ScaleModel:
+    SynchronizeEnabled: 0
+    InterpolateOption: 0
+    InterpolateMoveTowardsSpeed: 1
+    InterpolateLerpSpeed: 0
 --- !u!114 &114140860087431232
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1712,7 +1747,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c910cd6d0b09145d985dd31b99ebbba1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerUiPrefab: {fileID: 1504525236113164, guid: 40890004d7e3a44f2bf8b0abb9fe7b78,
+    type: 2}
   beams: {fileID: 1657391422267556}
+  Health: 1
+--- !u!114 &114168161600059532
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1425597309360012}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  Synchronization: 3
+  OwnershipTransfer: 0
+  ObservedComponents:
+  - {fileID: 114103980863049520}
+  - {fileID: 114308480248588930}
+  - {fileID: 114140860087431232}
+  viewIdField: 0
+  InstantiationId: 1
+  isRuntimeInstantiated: 0
 --- !u!114 &114264998509699106
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1725,6 +1786,37 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   directionDampTime: 0.25
+--- !u!114 &114308480248588930
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1425597309360012}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b8c4a61274f60b4ea5fb4299cfdbf14, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ShowLayerWeightsInspector: 1
+  ShowParameterInspector: 1
+  m_SynchronizeParameters:
+  - Type: 1
+    SynchronizeType: 1
+    Name: Speed
+  - Type: 1
+    SynchronizeType: 1
+    Name: Direction
+  - Type: 4
+    SynchronizeType: 0
+    Name: Hi
+  - Type: 9
+    SynchronizeType: 1
+    Name: Jump
+  m_SynchronizeLayers:
+  - SynchronizeType: 0
+    LayerIndex: 0
+  - SynchronizeType: 0
+    LayerIndex: 1
 --- !u!114 &114459856876394264
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1740,7 +1832,7 @@ MonoBehaviour:
   height: 3
   heightSmoothLag: 0.3
   centerOffset: {x: 0, y: 4, z: 0}
-  followOnStart: 1
+  followOnStart: 0
 --- !u!137 &137126793609399406
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1
